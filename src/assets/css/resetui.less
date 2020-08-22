@@ -1,0 +1,375 @@
+// 主题色
+@maincolor: rgb(241, 63, 24);
+// Color Palette
+@black: #000;
+@white: #fff;
+@gray-1: #f7f8fa;
+@gray-2: #f2f3f5;
+@gray-3: #ebedf0;
+@gray-4: #dcdee0;
+@gray-5: #c8c9cc;
+@gray-6: #969799;
+@gray-7: #646566;
+@gray-8: #323233;
+@red: #ee0a24;
+@blue: #1989fa;
+@orange: #ff976a;
+@orange-dark: #ed6a0c;
+@orange-light: #fffbe8;
+@green: #07c160;
+
+
+// .icon-erji2,
+// .icon-shoucang2 {
+//   color: @gray-8 ;
+// }
+
+// Gradient Colors
+@gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+@gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+
+// Component Colors
+@text-color: @gray-8;
+@active-color: @gray-2;
+@active-opacity: 0.7;
+@disabled-opacity: 0.5;
+@background-color: @gray-1;
+@background-color-light: #fafafa;
+@text-link-color: #576b95;
+
+// Padding
+@padding-base: 4px;
+@padding-xs: @padding-base * 2;
+@padding-sm: @padding-base * 3;
+@padding-md: @padding-base * 4;
+@padding-lg: @padding-base * 6;
+@padding-xl: @padding-base * 8;
+
+// Font
+@font-size-xs: 20px;
+@font-size-sm: 24px;
+@font-size-md: 30px;
+@font-size-lg: 36px;
+@font-weight-bold: 500;
+@base-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+  Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft Yahei', sans-serif;
+@price-integer-font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial,
+  sans-serif;
+
+body,
+html,
+#app {
+  left: 0px;
+  right: 0px;
+  max-width: 640PX;
+  min-width: 320PX;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fixed {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  max-width: 640PX;
+  min-width: 320PX;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+input,
+select,
+button {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+table {
+  border: none;
+}
+
+td,
+th {
+  vertical-align: middle;
+}
+
+.slot1 {
+  border-left: 8px solid rgb(241, 63, 24);
+  margin-left: 22px;
+  padding-left: 5px;
+  margin-bottom: 4px;
+  font-size: @font-size-lg;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 22px;
+
+}
+
+.flexauto {
+  flex: auto;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex3 {
+  flex: 3;
+}
+
+.flex4 {
+  flex: 4;
+}
+
+.flex5 {
+  flex: 5;
+}
+
+.titlesize {
+  font-size: 36px;
+}
+
+
+.panel {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0px;
+  border-radius: 4px;
+  border-bottom: 1px solid @gray-2;
+  border-radius: 10px;
+
+  .panel-title {
+    height: @font-size-md;
+    padding: 0px 10px;
+  }
+
+  .panel-left {
+    font-size: @font-size-md;
+    float: left;
+  }
+
+  .panel-right {
+    font-size: @font-size-md;
+    float: right;
+  }
+}
+
+.panel:first-child {
+  margin: 10px 0px;
+}
+
+
+.intro {
+  padding-left: 20px;
+  flex: auto;
+
+  b {
+    font-size: @font-size-md;
+  }
+
+  span {
+    font-size: @font-size-sm;
+  }
+
+  .title {
+    height: 6vw;
+    line-height: 6vw;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 30px;
+  }
+
+  .title2 {
+    height: 12vw;
+    line-height: 6vw;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 30px;
+  }
+
+  .moreintro {
+    height: 18vw;
+    overflow-y: hidden;
+    line-height: 6vw;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 24px;
+    color: @gray-6;
+  }
+
+  .score {
+    display: flex;
+    height: 6vw;
+    justify-content: flex-end;
+    color: @gray-6;
+
+    div {
+      flex: 1;
+      line-height: 6vh;
+      font-size: @font-size-sm;
+
+      &:nth-child(n + 2) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.hotcontainer {
+  display: flex;
+  height: calc(100vh - 170px);
+  overflow-y: scroll;
+
+  .hotbox-left {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px @gray-1;
+    height: calc(100vh - 170px);
+    overflow-y: scroll;
+  }
+
+  .hotbox-right {
+    padding: 0px 10px;
+    height: calc(100vh - 170px);
+    overflow-y: scroll;
+  }
+}
+
+.hotbox-left::-webkit-scrollbar {
+  display: none;
+}
+
+.van-tabs__wrap {
+  box-shadow: 4px 0px 4px #cccccc;
+}
+
+.van-tabs__wrap {
+  height: 80px !important;
+}
+
+// 评论
+.comment {
+  border-bottom: 1px solid @gray-3;
+  padding: 20px 0px;
+  display: flex;
+
+  .comment-left {
+    width: 80px;
+    flex-shrink: 0;
+
+    .img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .comment-right {
+    flex: auto;
+
+    .comment_header {
+      display: flex;
+      margin-bottom: 10px;
+
+      .comment-person-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      .comment-person-intro {
+        padding: 0px 10px;
+        height: 80px;
+
+        p {
+          height: 40px;
+          font-size: @font-size-md;
+          color: @gray-6;
+        }
+      }
+
+      .zan {
+        flex: 1;
+        text-align: right;
+
+        img {
+          width: @font-size-lg;
+        }
+      }
+    }
+
+    .comment_body {
+      padding: 10px;
+      background-color: @gray-1;
+      border-radius: 10px;
+      margin-bottom: 10px;
+
+      p {
+        color: @gray-7;
+        letter-spacing: 4px;
+        font-size: @font-size-md;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+    }
+
+    .comment-footer {
+      padding: 10px;
+      display: flex;
+      font-size: @font-size-md;
+
+      a {
+        color: rgb(107, 138, 231);
+      }
+
+      .flex1 {
+        text-align: right;
+      }
+
+      img {
+        width: @font-size-lg;
+      }
+    }
+  }
+}
